@@ -79,7 +79,7 @@
 	0x0123 00291 (xl-v1.go:123)	CALL	"".xlObjects.ReceiverByVal(SB)
 ```
 
-`sizeof(struct) >= 24`
+`sizeof(struct) <= 24`
 ```go
 	0x0072 00114 (xl-v1.go:297)	MOVQ	"".xl+48(SP), AX
 	0x0077 00119 (xl-v1.go:297)	MOVQ	(AX), CX
