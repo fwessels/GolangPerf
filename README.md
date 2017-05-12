@@ -104,8 +104,6 @@
 
 **Also without side effects, it still makes a copy and calls the value receiver** 
 
-### Difference between defining 
-
 #### Duff's device
 
 ```

@@ -66,7 +66,8 @@
 	0x001d 00029 (xl-v1.go:113)	RET
 ```
 
-
+`sizeof(struct) >= 32`
+```go
 	0x00f2 00242 (xl-v1.go:123)	MOVQ	"".xl+120(SP), AX
 	0x00f7 00247 (xl-v1.go:123)	MOVQ	(AX), CX
 	0x00fa 00250 (xl-v1.go:123)	MOVQ	CX, (SP)
@@ -76,7 +77,10 @@
 	0x011a 00282 (xl-v1.go:123)	MOVQ	$123, 88(SP)
 	0x0123 00291 (xl-v1.go:123)	PCDATA	$0, $2
 	0x0123 00291 (xl-v1.go:123)	CALL	"".xlObjects.ReceiverByVal(SB)
+```
 
+`sizeof(struct) >= 24`
+```go
 	0x0072 00114 (xl-v1.go:297)	MOVQ	"".xl+48(SP), AX
 	0x0077 00119 (xl-v1.go:297)	MOVQ	(AX), CX
 	0x007a 00122 (xl-v1.go:297)	MOVQ	CX, (SP)
@@ -84,12 +88,17 @@
 	0x0082 00130 (xl-v1.go:297)	MOVUPS	X0, 8(SP)
 	0x0087 00135 (xl-v1.go:297)	PCDATA	$0, $1
 	0x0087 00135 (xl-v1.go:297)	CALL	"".xlObjects.ReceiverByVal(SB)
+```
 
+`*struct`
+```go
 	0x01aa 00426 (xl-v1.go:124)	MOVQ	"".xl+120(SP), AX
 	0x01af 00431 (xl-v1.go:124)	MOVQ	AX, (SP)
 	0x01b3 00435 (xl-v1.go:124)	MOVQ	$123, 8(SP)
 	0x01bc 00444 (xl-v1.go:124)	PCDATA	$0, $4
 	0x01bc 00444 (xl-v1.go:124)	CALL	"".(*xlObjects).ReceiverByRef(SB)
+
+```
 
 
 ### return values
